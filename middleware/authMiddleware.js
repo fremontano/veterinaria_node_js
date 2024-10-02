@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import Veterinario from '../models/Veterinario.js';
 
 const check_auth = async (req, res, next) => {
+    console.log(req.headers);
     let token;
 
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
